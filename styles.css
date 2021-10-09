@@ -157,13 +157,34 @@ button{
         height: 2rem;
     }
 
+    .heading {
+        justify-content: space-between;
+        margin: 0 1rem;
+        border-bottom: 1px solid #767676;
+        height: 5rem;
+    }
+
     #menu, #close-icon {
         display: none;
     }
 
+    .header {
+        position: relative;
+    }
+
    nav ul  {
        display: flex;
+       position: absolute;
+       bottom: 45px;
+       left: 10rem
    }
+
+   nav ul li {
+       padding-right: 1rem;
+      
+   }
+
+
 
 }
 
