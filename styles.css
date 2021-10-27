@@ -151,7 +151,16 @@ button{
     
 }
 
+.tab-photos{
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
+    .flex-tab{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
     nav{
         overflow: visible ;
         height: 2rem;
@@ -184,7 +193,7 @@ button{
    }
     
    #carousel{
-       width: 50vw;
+       width: 30vw;
    }
 
    .carousel-photo{
@@ -192,13 +201,30 @@ button{
    }
 
    #content {
-       width: 40vw;
+       width: 30vw;
        padding: unset;
    }
 
    button{
        width: unset;
    }
+
+   
+    .tab-photos{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+
+    .tab-photo {
+        width: 75px;
+        height: 80px;
+        margin: 0.5rem;
+        border: 2px solid red;
+        border-radius: 10px;
+    }
+
+
 
 
 }
