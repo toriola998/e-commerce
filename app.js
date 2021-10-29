@@ -25,3 +25,21 @@ navLinks.forEach(link => {
   }); 
 });
 
+const productPhotos = document.querySelectorAll('.product-photo')
+const activeProduct = document.querySelector('.active-product')
+const carouselPhoto = document.querySelector('.carousel-photo')
+
+let myProductArray = [...productPhotos]; //convert nodelist to an arrat
+console.log(myProductArray)
+
+
+
+myProductArray.forEach(function(item){
+  item.addEventListener('click', function(e){
+    carouselPhoto.src = e.target.src;
+    
+  })
+
+})
+
+

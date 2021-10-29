@@ -151,16 +151,16 @@ button{
     
 }
 
-.tab-photos{
+.product-photos{
     display: none;
 }
 
 @media screen and (min-width: 768px) {
     .flex-tab{
         display: flex;
-        justify-content: space-evenly;
-        
+        justify-content: space-evenly;  
     }
+
     nav{
         overflow: visible ;
         height: 2rem;
@@ -193,7 +193,7 @@ button{
    }
     
    #carousel{
-       width: 30vw;
+       width: 45vw;
    }
 
    .carousel-photo{
@@ -210,13 +210,13 @@ button{
    }
 
    
-    .tab-photos{
+    .product-photos{
         display: flex;
         justify-content: center;
         margin-top: 1.5rem;
     }
 
-    .tab-photo {
+    .product-photo {
         width: 75px;
         height: 80px;
         margin: 0.5rem;
