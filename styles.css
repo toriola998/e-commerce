@@ -1,37 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-* {
+ * {
     margin: 0;
     padding: 0 ;
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
-}
+    }
 
-.flex {
+  .flex {
     display: flex;
-}
+  }
 
-.heading {
+  .heading {
     justify-content: space-around;
     height: 4rem;
     align-items: center;
-}
+  }
 
-#menu, #cart, #avatar {
+  #menu, #cart, #avatar {
     width: 20px;
     height: 20px;   
-}
+  }
 
-#cart, #menu{
+  #cart, #menu{
     margin-right: 1rem ;
-}
+  }
 
-#logo {
+  #logo {
     width: 110px;
     height: 18px;
-} 
+  } 
 
-.show-links {
+  .show-links {
     position: fixed;
     z-index: 9999;
     height: 100vh;
@@ -82,40 +82,40 @@
     width: 100vw
   }
 
-.carousel-photo{
+  .carousel-photo{
     height: 350px;
     width: 100vw;
     margin: auto;
     display: block;
-}
+   }
 
-#content{
+  #content{
     padding: 2rem 1rem 5rem;
-}
+  }
 
-#content h6 {
+  #content h6 {
     color: hsl(26, 100%, 55%);
     margin-bottom: 0.5rem;
-}
+  }
 
-#description{
+  #description{
     color: #767676;
     margin: 1rem 0;
     font-size: 15px;
     line-height: 1.5; 
-}
+ }
 
-.price {
+  .price {
     justify-content: space-between;
     align-items: center;
     margin: 1.7rem 0;
-}
+   }
 
-.price h1 {
+  .price h1 {
     font-size: 30px;
-}
+  }
 
-#discount{
+  #discount{
     margin: 0.3rem 0 0 2rem;
     color: hsl(26, 100%, 55%);
     background-color: hsl(25, 100%, 94%);
@@ -125,108 +125,114 @@
     font-weight: 700;
     border-radius: 5px;
     padding-top: 5px;
-}
+  }
 
-#slashed-price {
+  #slashed-price {
     color: #767676;
     text-decoration: line-through;
-}
+  }
 
-#cart-num{
+  #cart-num{
     background-color: hsl(223, 64%, 98%);
     height: 3.5rem;
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
     margin: 1rem 0;
-}
+   }
 
-button{
+  button{
     border: none;
     background-color: hsl(26, 100%, 55%);
     border-radius: 5px;
     color: hsl(0, 0%, 100%);
     padding: 1rem 2rem;
-    width: 90vw;
-    
-}
+    width: 90vw;  
+  }
 
-.product-photos{
+  .product-photos{
     display: none;
-}
+  }
+
 
 @media screen and (min-width: 768px) {
-    .flex-tab{
-        display: flex;
-        justify-content: space-evenly;  
-    }
+  .flex-tab{
+    display: flex;
+    justify-content: space-evenly;  
+  }
 
-    nav{
-        overflow: visible ;
-        height: 2rem;
-    }
+  nav{
+    overflow: visible ;
+    height: 2rem;
+ }
 
-    .heading {
-        justify-content: space-between;
-        margin: 0 1rem;
-        border-bottom: 1px solid #767676;
-        height: 5rem;
-    }
+ .heading {
+    justify-content: space-between;
+    margin: 0 1rem;
+    border-bottom: 1px solid #767676;
+    height: 5rem;
+  }
 
-    #menu, #close-icon {
-        display: none;
-    }
+  #menu, #close-icon {
+    display: none;
+  }
 
-    .header {
-        position: relative;
-    }
+  .header {
+    position: relative;
+  }
 
-   nav ul  {
-       display: flex;
-       position: absolute;
-       bottom: 45px;
-       left: 10rem
-   }
+  nav ul  {
+    display: flex;
+    position: absolute;
+    bottom: 45px;
+    left: 10rem
+  }
 
-   nav ul li {
-       padding-right: 1rem; 
-   }
-    
-   #carousel{
-       width: 45vw;
-   }
+  nav ul li {
+    padding-right: 1rem; 
+  }
 
-   .carousel-photo{
-       width: auto;
-   }
+  #carousel{
+    width: 45vw;
+  }
 
-   #content {
-       width: 30vw;
-       padding: unset;
-   }
+  .carousel-active {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 99;
+  }
 
-   button{
-       width: unset;
-   }
+  .carousel2{
+    display: none;
+  }
 
-   
-    .product-photos{
-        display: flex;
-        justify-content: center;
-        margin-top: 1.5rem;
-    }
+  .carousel-photo{
+    width: auto;
+    border-radius: 10px;
+  }
 
-    .product-photo {
-        width: 75px;
-        height: 80px;
-        margin: 0.5rem;
-        border: 2px solid red;
-        border-radius: 10px;
-    }
+  #content {
+    width: 30vw;
+    padding: unset;
+  }
 
+  button{
+    width: unset;
+  }
 
+ .product-photos{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
 
-
+ .product-photo {
+    width: 75px;
+    height: 80px;
+    margin: 0.5rem;
+    border-radius: 10px;
+ }
 }
 
 

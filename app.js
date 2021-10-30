@@ -9,7 +9,6 @@ menu.addEventListener('click', function(){
 links.classList.toggle('show-links');
 //overlay.style.display = "block"
 //body.classList.add('overlay')
-
 });
 
 //Close the side bar once the close icon gets clicked
@@ -26,20 +25,25 @@ navLinks.forEach(link => {
 });
 
 const productPhotos = document.querySelectorAll('.product-photo')
-const activeProduct = document.querySelector('.active-product')
 const carouselPhoto = document.querySelector('.carousel-photo')
+let myProductArray = [...productPhotos]; //convert nodelist to an array
 
-let myProductArray = [...productPhotos]; //convert nodelist to an arrat
-console.log(myProductArray)
-
-
-
+//change thumbnails to hero-images when clicked on.
 myProductArray.forEach(function(item){
   item.addEventListener('click', function(e){
     carouselPhoto.src = e.target.src;
-    
   })
+})
 
+const overlay = document.querySelector('.overlay')
+const carousel = document.querySelector('#carousel')
+const carousel2 = document.querySelector('.carousel2')
+
+//make product full the page when clicked on.
+carouselPhoto.addEventListener('click', function(){
+  overlay.style.display = "block";
+  carousel.classList.add('carousel-active');
+  carousel2.style.display = "block"
 })
 
 
