@@ -52,5 +52,36 @@ carouselPhoto.addEventListener('click', function(){
     stackOver[i].style.zIndex = 99999;
   }
 })
+ 
+const add = document.querySelector('#add');
+const minus = document.querySelector('#minus');
+const cartNumber = document.querySelector('#cart-number')
+let numValue = document.querySelector('#num');
+
+let num = 0;
+
+add.addEventListener('click', () => {
+  num++
+  numValue.innerHTML = num;
+  cartNumber.innerHTML = num;
+})
+
+minus.addEventListener('click', () => {
+  if(numValue.innerHTML >= 1){
+    num--;
+    numValue.innerHTML = num;
+    cartNumber.innerHTML = num;
+  }
+})
+
+
+
+
+
+
+
+
+
+
 
 
