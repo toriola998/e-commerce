@@ -37,13 +37,20 @@ myProductArray.forEach(function(item){
 
 const overlay = document.querySelector('.overlay')
 const carousel = document.querySelector('#carousel')
-const carousel2 = document.querySelector('.carousel2')
+const carousel2 = document.querySelector('.carousel2')  //the product div below overlay. display-none by default
+const stackOver = document.querySelectorAll('.stack-over')
+console.log(stackOver)
 
 //make product full the page when clicked on.
 carouselPhoto.addEventListener('click', function(){
   overlay.style.display = "block";
   carousel.classList.add('carousel-active');
-  carousel2.style.display = "block"
+  carousel2.style.display = "block";
+
+  for (let i = 0; i < stackOver.length; i += 1){
+    stackOver[i].style.display = 'flex';
+    stackOver[i].style.zIndex = 99999;
+  }
 })
 
 

@@ -87,6 +87,7 @@
     width: 100vw;
     margin: auto;
     display: block;
+    position: relative;
    }
 
   #content{
@@ -154,11 +155,48 @@
     display: none;
   }
 
+  .circle-wrapper{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stack-over{
+    display: none;
+}
+
+#previous{
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+}
+
+  #next{
+    position: absolute;
+    top: 10rem;
+    right: 2.5rem
+  }
+
+  #close-overlay-icon{
+      position: absolute;
+      top: -2rem;
+      right: 2rem;
+      background-color: orange;
+
+  }
+
+
 
 @media screen and (min-width: 768px) {
   .flex-tab{
     display: flex;
-    justify-content: space-evenly;  
+    justify-content: space-evenly; 
+    align-items: center;
+    height: 100vh; 
   }
 
   nav{
@@ -210,6 +248,7 @@
   .carousel-photo{
     width: auto;
     border-radius: 10px;
+    position: relative;
   }
 
   #content {
@@ -233,6 +272,7 @@
     margin: 0.5rem;
     border-radius: 10px;
  }
+
 }
 
 

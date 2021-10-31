@@ -38,9 +38,19 @@
             </section>
             
             <div class="flex-tab">
+                <!--Show this section when a product(not thumbnail) is clicked-->
                 <section id="carousel">
                     <div>
+
+                        <img src="./images/icon-close.svg" alt="close" class="stack-over" id="close-overlay-icon"/>
+                        
+                        <div class="circle-wrapper stack-over" id="previous">
+                            <img src="./images/icon-previous.svg" alt="previous" > 
+                        </div>
                         <img src="./images/image-product-1.jpg" class="carousel-photo"/>
+                        <div class="circle-wrapper stack-over" id="next">
+                            <img src="./images/icon-next.svg" alt="next" />
+                        </div>
                         <!--<img src="./images/image-product-2.jpg" class="carousel-photo"/>
                         <img src="./images/image-product-3.jpg" class="carousel-photo"/>
                         <img src="./images/image-product-4.jpg" class="carousel-photo"/>-->
@@ -54,6 +64,8 @@
                     </div>
                 </section> 
 
+               <!--This is the product div that shows under the overlay, display:none by default, only 
+                   shows when a hero product is clicked-->
                 <section id="carousel" class="carousel2">
                     <div>
                         <img src="./images/image-product-1.jpg" class="carousel-photo"/>
