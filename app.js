@@ -57,13 +57,14 @@ const add = document.querySelector('#add');
 const minus = document.querySelector('#minus');
 const cartNumber = document.querySelector('#cart-number')
 let numValue = document.querySelector('#num');
+const cartAlert = document.getElementById('cart-alert');
 
 let num = 0;
 
 add.addEventListener('click', () => {
   num++
   numValue.innerHTML = num;
-  cartNumber.innerHTML = num;
+  cartNumber.innerHTML = num; 
 })
 
 minus.addEventListener('click', () => {
@@ -75,6 +76,33 @@ minus.addEventListener('click', () => {
 })
 
 
+const addToCartBtn = document.getElementById('add-to-cart-btn')
+addToCartBtn.addEventListener('click', () => {
+  cartAlert.style.display = 'flex';
+} )
+
+const closeOverlay = document.getElementById('close-overlay-icon')
+closeOverlay.addEventListener('click', () => {
+  overlay.style.display = "none";
+  carousel2.style.display = "none";
+  carousel.classList.remove('carousel-active');
+  
+  for (let i = 0; i < stackOver.length; i += 1){
+    stackOver[i].style.display = 'none';
+  }
+})
+
+const cartBox = document.querySelector('.cart-box')
+const totalPrice = document.querySelector('.total-price')
+const deleteBtn = document.getElementById('delete-btn')
+const noOfItems = document.querySelector('.no-of-items')
+const cartImage = document.getElementById('cart')
+
+cartImage.addEventListener('click', () => {
+  cartBox.classList.toggle('cart-box-active')
+})
+
+  
 
 
 
@@ -85,3 +113,5 @@ minus.addEventListener('click', () => {
 
 
 
+
+ 
