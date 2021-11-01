@@ -58,13 +58,14 @@ const minus = document.querySelector('#minus');
 const cartNumber = document.querySelector('#cart-number')
 let numValue = document.querySelector('#num');
 const cartAlert = document.getElementById('cart-alert');
-
+let noOfItems = document.querySelector('.no-of-items')
 let num = 0;
 
 add.addEventListener('click', () => {
   num++
   numValue.innerHTML = num;
   cartNumber.innerHTML = num; 
+  noOfItems.textContent = num;
 })
 
 minus.addEventListener('click', () => {
@@ -72,6 +73,7 @@ minus.addEventListener('click', () => {
     num--;
     numValue.innerHTML = num;
     cartNumber.innerHTML = num;
+    noOfItems.textContent = num;
   }
 })
 
@@ -95,13 +97,15 @@ closeOverlay.addEventListener('click', () => {
 const cartBox = document.querySelector('.cart-box')
 const totalPrice = document.querySelector('.total-price')
 const deleteBtn = document.getElementById('delete-btn')
-const noOfItems = document.querySelector('.no-of-items')
+
 const cartImage = document.getElementById('cart')
 
 cartImage.addEventListener('click', () => {
   cartBox.classList.toggle('cart-box-active')
 })
 
+
+noOfItems.textContent = numValue.innerHTML;
   
 
 
