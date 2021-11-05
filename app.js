@@ -73,9 +73,10 @@ const multiply = function (a, b){
 //The default empty state of the cart box
 cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>'
 
-let calc = parseInt(multiply(125, num))
+
 //when a user adds products
 add.addEventListener('click', () => {
+  let calc = parseInt(multiply(125, num))
   num++
   numValue.innerHTML = num;
   cartNumber.innerHTML = num; 
@@ -99,6 +100,7 @@ add.addEventListener('click', () => {
 
 //when a user reduces the number of products
 minus.addEventListener('click', () => {
+  let calc = parseInt(multiply(125, num))
   if(numValue.innerHTML >= 1){
     num--;
     numValue.innerHTML = num;
