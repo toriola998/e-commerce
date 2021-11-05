@@ -69,39 +69,28 @@ const multiply = function (a, b){
   return a * b;
 }
 
-const deleteImage = ``
-//console.log(deleteImage)
-
-//cartDetails.innerHTML = '';
-cartDetails.innerHTML = '<p>Your cart is empty</p>'
+cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>'
 
 add.addEventListener('click', () => {
   num++
   numValue.innerHTML = num;
   cartNumber.innerHTML = num; 
-  //noOfItems.textContent = num;
-
   let calc = parseInt(multiply(125, num))
-  //console.log(calc);
-  //totalPrice.textContent = `$${calc}.00`;
-  //noOfItems.textContent = num
 
   if(numValue.innerHTML >= 1){
     cartDetails.innerHTML = `<div>
                                 <div class="flex">
-                                    <img src="" class="cart-product">
-                                    <div>
-                                        <p>Autumn Limited Edition...</p>
-                                        <p>$125.00 * 
-                                            <span class="no-of-items">${num}</span>
-                                            <span class="total-price">$${calc}.00</span></p>
-                                            <img src="./images/icon-delete.svg" id="delete-btn"/>
-                                    </div>
-
+                                  <div class="flex">
+                                    <img src="./images/image-product-1.jpg" class="cart-product">
+                                    <p>Autumn Limited Edition...
+                                      $125.00 * 
+                                      <span class="no-of-items">${num}</span>
+                                      <span class="total-price">$${calc}.00</span></p>       
+                                  </div>
+                                  <img src="./images/icon-delete.svg" id="delete-btn"/>
                                 </div>
                                 <button id="checkout">Checkout</button>
-                              </div>`
-          
+                              </div>`      
   }
 })
 
@@ -111,7 +100,6 @@ minus.addEventListener('click', () => {
     numValue.innerHTML = num;
     cartNumber.innerHTML = num;
   }
- // noOfItems.textContent = num;
 })
 
 addToCartBtn.addEventListener('click', () => {
@@ -135,34 +123,13 @@ cartImage.addEventListener('click', () => {
   cartBox.classList.toggle('cart-box-active')
 })
 
-//const myDelete = 
-//console.log(myDelete)
- 
+//Delete or empty cart 
 cartDetails.addEventListener('click', (e) => {
-  cartDetails.firstElementChild.firstElementChild.lastElementChild
-  if(e.target.id = 'delete-btn'){
+  cartDetails.firstElementChild.firstElementChild.lastElementChild;
+  if(e.target.id == 'delete-btn'){                    //if that exact element isn't targeted, the event listener will add to the whole family (parent, child, sibling)
     cartDetails.innerHTML = '';
-    cartDetails.innerHTML = '<p>Your cart is empty</p>';
+    cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
     console.log('red')
     cartAlert.style.display = "none"
-  }
-   
-    
-  })
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
- 
+  }  
+})
