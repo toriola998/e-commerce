@@ -45,7 +45,7 @@ navLinks.forEach(link => {
   }); 
 });
 
-let myProductArray = [...productPhotos]; //convert nodelist to an array
+let myProductArray = [...productPhotos]; //convert nodelist to an array//
 //change thumbnails to hero-images when clicked on.
 myProductArray.forEach(function(item){
   item.addEventListener('click', function(e){
@@ -64,18 +64,22 @@ carouselPhoto.addEventListener('click', function(){
     stackOver[i].style.zIndex = 99999;
   }
 })
- 
+
+//calculation for product price multiplied by number of product picked
 const multiply = function (a, b){
   return a * b;
 }
 
+//The default empty state of the cart box
 cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>'
 
+let calc = parseInt(multiply(125, num))
+//when a user adds products
 add.addEventListener('click', () => {
   num++
   numValue.innerHTML = num;
   cartNumber.innerHTML = num; 
-  let calc = parseInt(multiply(125, num))
+  
 
   if(numValue.innerHTML >= 1){
     cartDetails.innerHTML = `<div>
@@ -94,11 +98,26 @@ add.addEventListener('click', () => {
   }
 })
 
+//when a user reduces the number of products
 minus.addEventListener('click', () => {
   if(numValue.innerHTML >= 1){
     num--;
     numValue.innerHTML = num;
     cartNumber.innerHTML = num;
+
+    cartDetails.innerHTML = `<div>
+                                <div class="flex">
+                                  <div class="flex">
+                                    <img src="./images/image-product-1.jpg" class="cart-product">
+                                    <p>Autumn Limited Edition...
+                                      $125.00 * 
+                                      <span class="no-of-items">${num}</span>
+                                      <span class="total-price">$${calc}.00</span></p>       
+                                  </div>
+                                  <img src="./images/icon-delete.svg" id="delete-btn"/>
+                                </div>
+                                <button id="checkout">Checkout</button>
+                              </div>`      
   }
 })
 
