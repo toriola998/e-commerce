@@ -418,9 +418,18 @@
 }
 
 @media screen and (min-width: 990px) {
+  
+  h6 {
+    font-size: 14px;
+  }
+  
+  #carousel{
+    width: 40vw;
+  }
+
   .product-photo {
-    width: 83px;
-    height: 90px;
+    width: 82px;
+    height: 88px;
  }
 
  .carousel-photo{
