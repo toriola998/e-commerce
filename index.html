@@ -10,6 +10,19 @@
         <body>  
             <div class="overlay"></div>
             <section class="header">
+                <nav>
+                    <div>
+                        <img src="./images/icon-close.svg" alt="close-icon" id="close-icon"/>
+                        <ul class="nav-items">
+                            <li><a href="#" class="nav-link">Collections</a></li>
+                            <li><a href="#about" class="nav-link">Men</a></li>
+                            <li><a href="#Portfolio" class="nav-link">  Women </a></li>
+                            <li><a href="#work" class="nav-link"> About </a></li>
+                            <li><a href="#contacts" class="nav-link">Contact</a></li>   
+                        </ul>
+                    </div>
+                </nav>
+
                 <div class="flex heading">
                     <div class="flex head">
                         <img src="./images/icon-menu.svg" alt="hamburger-menu" id="menu">
@@ -18,15 +31,22 @@
 
                     <div>
                         <div class="flex head"> 
-                            <img src="./images/icon-cart.svg" alt="cart" id="cart"/>
+                            <div>
+                                <img src="./images/icon-cart.svg" alt="cart" id="cart"/>
+                                <div id="cart-alert">
+                                    <p id="cart-number">0</p>
+                                </div>
+                            </div>
                             <img src="./images/image-avatar.png" alt="avatar" id="avatar"/>
                         </div>
                     </div>
+                </div>
 
+               
+                <div class="cart-box-wrapper">
                     <div class="cart-box">
                         <h2>Cart</h2>
                         <div class="hr-line"></div>
-                        
                         <div>
                             <div class="cart-details">
                                 <!--<div>
@@ -43,27 +63,9 @@
                                     <button id="checkout">Checkout</button>
                                 </div>-->
                             </div>
-                            <!--<p>Your cart is empty</p>-->
                         </div>
-
                     </div>
                 </div>
-                <div id="cart-alert">
-                    <p id="cart-number">0</p>
-                </div>
-               
-                <nav>
-                    <div>
-                        <img src="./images/icon-close.svg" alt="close-icon" id="close-icon"/>
-                        <ul class="nav-items">
-                            <li><a href="#" class="nav-link">Collections</a></li>
-                            <li><a href="#about" class="nav-link">Men</a></li>
-                            <li><a href="#Portfolio" class="nav-link">  Women </a></li>
-                            <li><a href="#work" class="nav-link"> About </a></li>
-                            <li><a href="#contacts" class="nav-link">Contact</a></li>   
-                        </ul>
-                    </div>
-                </nav>
             </section>
             
             <div class="flex-tab">
@@ -75,7 +77,7 @@
                         <div class="circle-wrapper stack-over" id="previous">
                             <img src="./images/icon-previous.svg" alt="previous" > 
                         </div>
-                        <img src="./images/image-product-1.jpg" class="carousel-photo"/>
+                        <img src="./images/image-product-1.jpg" class="carousel-photo hide-mobile"/>
                         <div class="circle-wrapper stack-over" id="next">
                             <img src="./images/icon-next.svg" alt="next" />
                         </div>
@@ -125,15 +127,18 @@
                         <p id="slashed-price">$250.00</p>
                     </div>
 
-                    <div id="cart-num" class="flex">
-                        <img src="./images/icon-minus.svg" id="minus">
-                        <p id="num">0</p> 
-                        <img src="./images/icon-plus.svg" id="add" >
+                    <div class="">
+                        <div id="cart-num" class="flex">
+                            <img src="./images/icon-minus.svg" id="minus">
+                            <p id="num">0</p> 
+                            <img src="./images/icon-plus.svg" id="add" >
+                        </div>
+                        
+                        <button id="add-to-cart-btn"> 
+                            <img src="./images/icon-cart.svg" alt="cart" id="cart"/>
+                            Add to cart
+                        </button>
                     </div>
-                    <button id="add-to-cart-btn"> 
-                        <img src="./images/icon-cart.svg" alt="cart" id="cart"/>
-                        Add to cart
-                    </button>
                 </main>
             </div>     
         <script src="app.js"></script>
