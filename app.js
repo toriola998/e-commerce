@@ -79,7 +79,6 @@ add.addEventListener('click', () => {
   num++
   numValue.innerHTML = num;
   cartNumber.innerHTML = num; 
-  
 
   if(numValue.innerHTML >= 1){
     cartDetails.innerHTML = `<div>
@@ -104,7 +103,6 @@ minus.addEventListener('click', () => {
     num--;
     numValue.innerHTML = num;
     cartNumber.innerHTML = num;
-
     cartDetails.innerHTML = `<div>
                                 <div class="flex">
                                   <div class="flex">
@@ -121,13 +119,12 @@ minus.addEventListener('click', () => {
   }
 })
 
+//update cart box when a user clicks on add-to-cart btn
 addToCartBtn.addEventListener('click', () => {
-  cartAlert.style.display = 'flex';
+  cartAlert.style.display = 'flex'; 
+})
 
-  
-  
-} )
-
+//when a user clicks on the close icon (when over is active)
 closeOverlay.addEventListener('click', () => {
   overlay.style.display = "none";
   carousel2.style.display = "none";
@@ -138,6 +135,7 @@ closeOverlay.addEventListener('click', () => {
   }
 })
 
+//show or hide cart box when a user toggles the cart
 cartImage.addEventListener('click', () => {
   cartBox.classList.toggle('cart-box-active')
 })
@@ -145,7 +143,7 @@ cartImage.addEventListener('click', () => {
 //Delete or empty cart 
 cartDetails.addEventListener('click', (e) => {
   cartDetails.firstElementChild.firstElementChild.lastElementChild;
-  if(e.target.id == 'delete-btn'){                    //if that exact element isn't targeted, the event listener will add to the whole family (parent, child, sibling)
+  if(e.target.id == 'delete-btn'){         //if that exact element isn't targeted, the event listener will add to the whole family (parent, child, sibling)
     cartDetails.innerHTML = '';
     cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
     console.log('red')
