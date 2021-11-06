@@ -286,7 +286,6 @@
       position: absolute;
       top: -2rem;
       right: 2rem;
-      background-color: orange;
   }
 
   .hide-mobile {
@@ -422,7 +421,7 @@
   h6 {
     font-size: 14px;
   }
-  
+
   #carousel{
     width: 40vw;
   }
