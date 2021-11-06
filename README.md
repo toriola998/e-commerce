@@ -2,7 +2,7 @@
 
 This is a solution to an intermediate project on [Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
 
-![Design preview for the E-commerce product page coding challenge](./images/screenshot.jpg)
+![Design preview for the E-commerce product page coding challenge](./images/screenshot.png)
 
 ## Features
 Users can...
