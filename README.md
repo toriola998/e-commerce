@@ -1,6 +1,6 @@
 # E-commerce product page
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to an intermediate project on [Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
 
 ![Design preview for the E-commerce product page coding challenge](./images/screenshot.jpg)
 
@@ -13,5 +13,5 @@ Users can...
 - Add items to the cart
 - View the cart and remove items from it
 
- Live Site URL: (https://sneakers-commerce.netlify.app/)
+ Live Site URL: https://sneakers-commerce.netlify.app/
 
