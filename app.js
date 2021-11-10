@@ -76,7 +76,7 @@ cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>'
 
 //when a user adds products
 add.addEventListener('click', () => {
-  let calc = parseInt(multiply(125, num))
+  let calc = parseInt(multiply(125, num+1))
   num++
   numValue.innerHTML = num;
   cartNumber.innerHTML = num; 
