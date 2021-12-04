@@ -1,88 +1,81 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+            <meta http-equiv="X-UA-Compatible" content="ie=edge" />
             <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
             <link rel="stylesheet" href="styles.css" type="text/css"/>
             <title>Frontend Mentor | E-commerce product page</title> 
         </head>
         <body>  
             <div class="overlay"></div>
-            <section class="header">
-                <nav>
-                    <div>
-                        <img src="./images/icon-close.svg" alt="close-icon" id="close-icon"/>
-                        <ul class="nav-items">
-                            <li><a href="#" class="nav-link">Collections</a></li>
-                            <li><a href="#about" class="nav-link">Men</a></li>
-                            <li><a href="#Portfolio" class="nav-link">  Women </a></li>
-                            <li><a href="#work" class="nav-link"> About </a></li>
-                            <li><a href="#contacts" class="nav-link">Contact</a></li>   
-                        </ul>
+            <header>
+                <div class="header">
+                    <nav>
+                        <div>
+                            <img src="./images/icon-close.svg" alt="close-icon" id="close-icon"/>
+                            <ul class="nav-items">
+                                <li><a href="#" class="nav-link">Collections</a></li>
+                                <li><a href="#about" class="nav-link">Men</a></li>
+                                <li><a href="#Portfolio" class="nav-link">  Women </a></li>
+                                <li><a href="#work" class="nav-link"> About </a></li>
+                                <li><a href="#contacts" class="nav-link">Contact</a></li>   
+                            </ul>
+                        </div>
+                    </nav>
+    
+                    <div class="flex heading">
+                        <div class="flex head">
+                            <img src="./images/icon-menu.svg" alt="hamburger-menu" id="menu">
+                            <img src="./images/logo.svg" alt="logo" id="logo"/>
+                        </div>
+    
+                        <div>
+                            <div class="flex head"> 
+                                <div>
+                                    <img src="./images/icon-cart.svg" alt="cart" id="cart"/>
+                                    <div id="cart-alert">
+                                        <p id="cart-number">0</p>
+                                    </div>
+                                </div>
+                                <img src="./images/image-avatar.png" alt="avatar" id="avatar"/>
+                            </div>
+                        </div>
                     </div>
-                </nav>
-
-                <div class="flex heading">
-                    <div class="flex head">
-                        <img src="./images/icon-menu.svg" alt="hamburger-menu" id="menu">
-                        <img src="./images/logo.svg" alt="logo" id="logo"/>
-                    </div>
-
-                    <div>
-                        <div class="flex head"> 
+       
+                    <div class="cart-box-wrapper">
+                        <div class="cart-box">
+                            <h2>Cart</h2>
+                            <div class="hr-line"></div>
                             <div>
-                                <img src="./images/icon-cart.svg" alt="cart" id="cart"/>
-                                <div id="cart-alert">
-                                    <p id="cart-number">0</p>
+                                <div class="cart-details">
+                                    <!--<div>
+                                        <div class="flex">
+                                            <img src="" class="cart-product">
+                                            <div>
+                                                <p id="product-desc">Autumn Limited Edition...</p>
+                                                <p>$125.00 * 
+                                                    <span class="no-of-items">3</span>
+                                                    <span class="total-price">$375.00</span></p>
+                                                <img src="./images/icon-delete.svg" id="delete-btn"/>
+                                            </div> 
+                                        </div>
+                                        <button id="checkout">Checkout</button>
+                                    </div>-->
                                 </div>
                             </div>
-                            <img src="./images/image-avatar.png" alt="avatar" id="avatar"/>
                         </div>
                     </div>
                 </div>
-   
-                <div class="cart-box-wrapper">
-                    <div class="cart-box">
-                        <h2>Cart</h2>
-                        <div class="hr-line"></div>
-                        <div>
-                            <div class="cart-details">
-                                <!--<div>
-                                    <div class="flex">
-                                        <img src="" class="cart-product">
-                                        <div>
-                                            <p id="product-desc">Autumn Limited Edition...</p>
-                                            <p>$125.00 * 
-                                                <span class="no-of-items">3</span>
-                                                <span class="total-price">$375.00</span></p>
-                                            <img src="./images/icon-delete.svg" id="delete-btn"/>
-                                        </div> 
-                                    </div>
-                                    <button id="checkout">Checkout</button>
-                                </div>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </header>
             
             <div class="flex-tab">
                 <!--Show this section when a product(not thumbnail) is clicked-->
                 <section id="carousel">
                     <div>
                         <img src="./images/icon-close.svg" alt="close" class="stack-over" id="close-overlay-icon"/>
-                        
-                        <div class="circle-wrapper stack-over" id="previous">
-                            <img src="./images/icon-previous.svg" alt="previous" > 
-                        </div>
-                        <img src="./images/image-product-1.jpg" class="carousel-photo hide-mobile"/>
-                        <div class="circle-wrapper stack-over" id="next">
-                            <img src="./images/icon-next.svg" alt="next" />
-                        </div>
-                        <!--<img src="./images/image-product-2.jpg" class="carousel-photo"/>
-                        <img src="./images/image-product-3.jpg" class="carousel-photo"/>
-                        <img src="./images/image-product-4.jpg" class="carousel-photo"/>-->
+
                         
                         <div class="product-photos">
                             <img src="./images/image-product-1.jpg" class="product-photo"/>
@@ -94,13 +87,13 @@
                 </section> 
 
                 <!--This is the product div that shows under the overlay, display:none by default, only 
-                shows when a hero product is clicked-->
+                shows when a hero product is clicked
                 <section id="carousel" class="carousel2">
                     <div>
-                        <img src="./images/image-product-1.jpg" class="carousel-photo"/>
-                        <!--<img src="./images/image-product-2.jpg" class="carousel-photo"/>
-                        <img src="./images/image-product-3.jpg" class="carousel-photo"/>
-                        <img src="./images/image-product-4.jpg" class="carousel-photo"/>-->
+                        
+                       <img src="./images/image-product-2.jpg" class="carousel-photo hide slider"/>
+                        <img src="./images/image-product-3.jpg" class="carousel-photo hide slider"/>
+                        <img src="./images/image-product-4.jpg" class="carousel-photo hide slider"/>
                         
                         <div class="product-photos">
                             <img src="./images/image-product-1.jpg" class="product-photo"/>
@@ -109,14 +102,23 @@
                             <img src="./images/image-product-4.jpg" class="product-photo"/>
                         </div>
                     </div>
-                </section> 
+                </section> -->
 
+                <section class="mobile-carousel">
+                    <img src="./images/image-product-1.jpg" class="mobile-carousel-photo"/>
+                    <div class="circle-wrapper" id="previous">
+                        <img src="./images/icon-previous.svg" alt="previous" > 
+                    </div>
+                    <div class="circle-wrapper" id="next">
+                        <img src="./images/icon-next.svg" alt="next" />
+                    </div>
+                </section>
                 <main id="content">
                     <h6>SNEAKER COMPANY</h6>
                     <h1>Fall Limited Edition Sneakers</h1>
 
                     <p id="description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-                    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                     durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
                     
                     <div class="flex price">
                         <div class="flex">
@@ -128,9 +130,9 @@
 
                     <div class="btn">
                         <div id="cart-num" class="flex">
-                            <img src="./images/icon-minus.svg" id="minus">
+                            <img src="./images/icon-minus.svg" id="minus" class="change-cart-num">
                             <p id="num">0</p> 
-                            <img src="./images/icon-plus.svg" id="add" >
+                            <img src="./images/icon-plus.svg" id="add" class="change-cart-num">
                         </div>
                         
                         <button id="add-to-cart-btn"> 
@@ -143,3 +145,7 @@
         <script src="app.js"></script>
     </body>
 </html>
+
+<!--<img src="./images/image-product-2.jpg" class="carousel-photo"/>
+                        <img src="./images/image-product-3.jpg" class="carousel-photo"/>
+                        <img src="./images/image-product-4.jpg" class="carousel-photo"/>-->
