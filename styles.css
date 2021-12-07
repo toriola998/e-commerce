@@ -480,14 +480,14 @@
  #content {
   width: 30vw;
 }
+
 #add-to-cart-btn span {
     font-size: 16px;
 }
 }
 
 @media screen and (min-width: 1200px) {
-
-  .product-photo {
+.product-photo {
     width: 90px;
     height: 90px;
  }

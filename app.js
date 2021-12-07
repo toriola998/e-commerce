@@ -73,32 +73,35 @@ cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>'
 const changeCartNumber = [...document.querySelectorAll('.change-cart-num')]
 changeCartNumber.forEach( (changeBtn) => {
   changeBtn.addEventListener('click', (e) => {
-    let calc = parseInt(multiply(125, num + 1))
+    let calc = parseInt(multiply(125.00, num))
       if (e.target.id === 'add'){
         num++
         numValue.innerHTML = num;
         cartNumber.innerHTML = num; 
       }else {
-        num--;
-        numValue.innerHTML = num;
-        cartNumber.innerHTML = num;
+          if(num >= 1) {
+            num--;
+            numValue.innerHTML = num;
+            cartNumber.innerHTML = num;
+          }else {
+              numValue.innerHTML = '0'
+              cartNumber.innerHTML = '0';
+          }
       }
-
-      if(numValue.innerHTML >= 1){
-        cartDetails.innerHTML = `<div>
+    cartDetails.innerHTML = `<div>
+                                <div class="flex">
                                     <div class="flex">
-                                      <div class="flex">
-                                        <img src="./images/image-product-1.jpg" class="cart-product">
-                                        <p>Autumn Limited Edition...
-                                          $125.00 * 
-                                          <span class="no-of-items">${num}</span>
-                                          <span class="total-price">$${calc}.00</span></p>       
-                                      </div>
-                                      <img src="./images/icon-delete.svg" id="delete-btn"/>
+                                    <img src="./images/image-product-1.jpg" class="cart-product">
+                                    <p>Autumn Limited Edition...
+                                        $125.00 * 
+                                        <span class="no-of-items">${num}</span>
+                                        <span class="total-price">$${calc}.00</span></p>       
                                     </div>
-                                    <button id="checkout">Checkout</button>
-                                  </div>`  
-  }})
+                                    <img src="./images/icon-delete.svg" id="delete-btn"/>
+                                </div>
+                                <button id="checkout">Checkout</button>
+                                </div>`  
+  })
 })
 
 //update cart box when a user clicks on add-to-cart btn
