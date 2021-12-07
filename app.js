@@ -73,7 +73,6 @@ cartDetails.innerHTML = '<p class="empty-cart">Your cart is empty</p>'
 const changeCartNumber = [...document.querySelectorAll('.change-cart-num')]
 changeCartNumber.forEach( (changeBtn) => {
   changeBtn.addEventListener('click', (e) => {
-    let calc = parseInt(multiply(125.00, num))
       if (e.target.id === 'add'){
         num++
         numValue.innerHTML = num;
@@ -88,6 +87,7 @@ changeCartNumber.forEach( (changeBtn) => {
               cartNumber.innerHTML = '0';
           }
       }
+    let calc = parseInt(multiply(125.00, num))
     cartDetails.innerHTML = `<div>
                                 <div class="flex">
                                     <div class="flex">
