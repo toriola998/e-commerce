@@ -5,7 +5,7 @@ const closeIcon = document.querySelector('#close-icon');
 const productPhotos = document.querySelectorAll('.product-photo')
 const carouselPhoto = document.querySelector('.carousel-photo')
 const overlay = document.querySelector('.overlay')
-const carousel = document.querySelector('#carousel')
+const carousel = document.querySelector('.carousel')
 const carousel2 = document.querySelector('.carousel2')  //the product div below overlay. display-none by default
 const stackOver = document.querySelectorAll('.stack-over')
 
@@ -51,7 +51,7 @@ myProductArray.forEach(function(item){
   })
 })
 
-/*make product full the page when clicked on.
+/*make product full the page when clicked on*/
 carouselPhoto.addEventListener('click', function(){
   overlay.style.display = "block";
   carousel.classList.add('carousel-active');
@@ -61,8 +61,7 @@ carouselPhoto.addEventListener('click', function(){
     stackOver[i].style.display = 'flex';
     stackOver[i].style.zIndex = 99999;
   }
-})*/
-
+})
 
 //calculation for product price multiplied by number of product picked
 const multiply = function (a, b){
@@ -134,7 +133,7 @@ cartDetails.addEventListener('click', (e) => {
 })
 
 
-const info = [
+const images = [
     {
         id: 1,
         img: "./images/image-product-1.jpg",
@@ -166,7 +165,7 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 //show details based on items
 function showNext (each) {
-    const item = info[each];  //variable of each item index info[0]
+    const item = images[each];  //variable of each item index info[0]
     mobileCarouselPhoto.src = item.img;
 }
 // show next item
@@ -174,13 +173,13 @@ carouselBtn.forEach( (sliderBtn) => {
     sliderBtn.addEventListener('click', (e) => {
         if(e.target.id === 'previous') {
             currentItem++;
-            if (currentItem > info.length - 1) {     //when your current item (num of clicks) gets bigger than array lenght, there'll be an error cos no item will be found, then you have to minus 1 from your arrays lenght bacause the lenght will be greater than the index, number starts from 0!  
+            if (currentItem > images.length - 1) {     //when your current item (num of clicks) gets bigger than array lenght, there'll be an error cos no item will be found, then you have to minus 1 from your arrays lenght bacause the lenght will be greater than the index, number starts from 0!  
                 currentItem = 0;
             }
             showNext(currentItem)
         } else {
             currentItem++;
-            if (currentItem > info.length - 1) {     //when your current item (num of clicks) gets bigger than array lenght, there'll be an error cos no item will be found, then you have to minus 1 from your arrays lenght bacause the lenght will be greater than the index, number starts from 0!  
+            if (currentItem > images.length - 1) {     //when your current item (num of clicks) gets bigger than array lenght, there'll be an error cos no item will be found, then you have to minus 1 from your arrays lenght bacause the lenght will be greater than the index, number starts from 0!  
                 currentItem = 0;
             }
             showNext(currentItem)
