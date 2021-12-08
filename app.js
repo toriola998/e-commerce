@@ -91,13 +91,13 @@ changeCartNumber.forEach( (changeBtn) => {
     cartDetails.innerHTML = `<div>
                                 <div class="flex">
                                     <div class="flex">
-                                    <img src="./images/image-product-1.jpg" class="cart-product">
+                                    <img src="./images/image-product-1.jpg" class="cart-product" alt="product">
                                     <p>Autumn Limited Edition...
                                         $125.00 * 
                                         <span class="no-of-items">${num}</span>
                                         <span class="total-price">$${calc}.00</span></p>       
                                     </div>
-                                    <img src="./images/icon-delete.svg" id="delete-btn"/>
+                                    <img src="./images/icon-delete.svg" id="delete-btn" alt="delete-btn"/>
                                 </div>
                                 <button id="checkout">Checkout</button>
                                 </div>`  

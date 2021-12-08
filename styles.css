@@ -29,7 +29,7 @@
    cursor: pointer;
   }
 
-  #menu, #cart{
+  #menu, .cart{
     width: 20px;
     height: 20px;   
   }
@@ -44,7 +44,7 @@
     border: 2px solid hsl(26, 100%, 55%);
   }
 
-  #cart, #menu{
+  .cart, #menu{
     margin-right: 1rem ;
   }
 
@@ -376,7 +376,7 @@
     padding-right: 1rem; 
   }
 
-  #menu, #cart{
+  #menu, .cart{
     width: 25px;
     height: 25px;   
   }
