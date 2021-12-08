@@ -69,75 +69,76 @@
                     </div>
                 </div>
             </header>
-            
-            <div class="flex-tab">
-                <!--Show this section when a product(not thumbnail) is clicked-->
-                <section class="carousel">
-                    <div>
-                        <img src="./images/close-icon.svg" alt="close" class="stack-over" id="close-overlay-icon"/>
-                        <img src="./images/image-product-1.jpg" class="carousel-photo" alt="product-photo"/>
-                        <div class="product-photos">
-                            <img src="./images/image-product-1.jpg" class="product-photo" alt="product-photo"/>
-                            <img src="./images/image-product-2.jpg" class="product-photo" alt="product-photo"/>
-                            <img src="./images/image-product-3.jpg" class="product-photo" alt="product-photo"/>
-                            <img src="./images/image-product-4.jpg" class="product-photo" alt="product-photo"/>
+            <main>
+                <div class="flex-tab">
+                    <!--Show this section when a product(not thumbnail) is clicked-->
+                    <section class="carousel">
+                        <div>
+                            <img src="./images/close-icon.svg" alt="close" class="stack-over" id="close-overlay-icon"/>
+                            <img src="./images/image-product-1.jpg" class="carousel-photo" alt="product-photo"/>
+                            <div class="product-photos">
+                                <img src="./images/image-product-1.jpg" class="product-photo" alt="product-photo"/>
+                                <img src="./images/image-product-2.jpg" class="product-photo" alt="product-photo"/>
+                                <img src="./images/image-product-3.jpg" class="product-photo" alt="product-photo"/>
+                                <img src="./images/image-product-4.jpg" class="product-photo" alt="product-photo"/>
+                            </div>
                         </div>
-                    </div>
-                </section> 
+                    </section> 
 
-                <!--This is the product div that shows under the overlay, display:none by default, only 
-                shows when a hero product is clicked-->
-                <section class="carousel2">
-                    <div>
-                        <img src="./images/image-product-1.jpg" class="carousel-photo" alt="product-photo"/>
-                        <div class="product-photos">
-                            <img src="./images/image-product-1.jpg" class="product-photo" alt="product-photo"/>
-                            <img src="./images/image-product-2.jpg" class="product-photo" alt="product-photo"/>
-                            <img src="./images/image-product-3.jpg" class="product-photo" alt="product-photo"/>
-                            <img src="./images/image-product-4.jpg" class="product-photo" alt="product-photo"/>
+                    <!--This is the product div that shows under the overlay, display:none by default, only 
+                    shows when a hero product is clicked-->
+                    <section class="carousel2">
+                        <div>
+                            <img src="./images/image-product-1.jpg" class="carousel-photo" alt="product-photo"/>
+                            <div class="product-photos">
+                                <img src="./images/image-product-1.jpg" class="product-photo" alt="product-photo"/>
+                                <img src="./images/image-product-2.jpg" class="product-photo" alt="product-photo"/>
+                                <img src="./images/image-product-3.jpg" class="product-photo" alt="product-photo"/>
+                                <img src="./images/image-product-4.jpg" class="product-photo" alt="product-photo"/>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!--Mobile screen carousel, display none on tab & desktop-->
-                <section class="mobile-carousel">
-                    <img src="./images/image-product-1.jpg" class="mobile-carousel-photo" alt="product-photo"/>
-                    <div class="circle-wrapper" id="previous">
-                        <img src="./images/icon-previous.svg" alt="previous"> 
-                    </div>
-                    <div class="circle-wrapper" id="next">
-                        <img src="./images/icon-next.svg" alt="next" />
-                    </div> 
-                </section>
-                <main id="content">
-                    <h6>SNEAKER COMPANY</h6>
-                    <h1>Fall Limited Edition Sneakers</h1>
-
-                    <p id="description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-                     durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-                    
-                    <div class="flex price">
-                        <div class="flex">
-                            <h1>$125.00</h1>
-                            <p id="discount">50%</p>
+                    <!--Mobile screen carousel, display none on tab & desktop-->
+                    <section class="mobile-carousel">
+                        <img src="./images/image-product-1.jpg" class="mobile-carousel-photo" alt="product-photo"/>
+                        <div class="circle-wrapper" id="previous">
+                            <img src="./images/icon-previous.svg" alt="previous"> 
                         </div>
-                        <p id="slashed-price">$250.00</p>
-                    </div>
+                        <div class="circle-wrapper" id="next">
+                            <img src="./images/icon-next.svg" alt="next" />
+                        </div> 
+                    </section>
+                    <div id="content">
+                        <h6>SNEAKER COMPANY</h6>
+                        <h1>Fall Limited Edition Sneakers</h1>
 
-                    <div class="btn">
-                        <div id="cart-num" class="flex">
-                            <img src="./images/icon-minus.svg" id="minus" class="change-cart-num" alt="minus">
-                            <p id="num">0</p> 
-                            <img src="./images/icon-plus.svg" id="add" class="change-cart-num" alt="add">
-                        </div>
+                        <p id="description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
                         
-                        <button id="add-to-cart-btn"> 
-                            <img src="./images/cart.svg" alt="cart" class="cart"/>
-                            <span>Add to cart</span> 
-                        </button>
+                        <div class="flex price">
+                            <div class="flex">
+                                <h1>$125.00</h1>
+                                <p id="discount">50%</p>
+                            </div>
+                            <p id="slashed-price">$250.00</p>
+                        </div>
+
+                        <div class="btn">
+                            <div id="cart-num" class="flex">
+                                <img src="./images/icon-minus.svg" id="minus" class="change-cart-num" alt="minus">
+                                <p id="num">0</p> 
+                                <img src="./images/icon-plus.svg" id="add" class="change-cart-num" alt="add">
+                            </div>
+                            
+                            <button id="add-to-cart-btn"> 
+                                <img src="./images/cart.svg" alt="cart" class="cart"/>
+                                <span>Add to cart</span> 
+                            </button>
+                        </div>
                     </div>
-                </main>
-            </div>     
+                </div>  
+            </main>   
         <script src="app.js"></script>
     </body>
 </html>
