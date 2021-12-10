@@ -18,7 +18,7 @@ const closeOverlay = document.getElementById('close-overlay-icon')
 
 const cartBox = document.querySelector('.cart-box')
 const deleteBtn = document.getElementById('delete-btn')
-const cartImage = document.getElementById('cart')
+const cartImage = document.querySelector('.cart')
 
 let navLinks = document.querySelectorAll('.nav-link');
 let numValue = document.querySelector('#num');
